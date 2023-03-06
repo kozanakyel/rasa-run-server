@@ -8,7 +8,7 @@ language: "en"  # your two-letter language code
 
 pipeline:
   - name: SpacyNLP
-    model: "en_core_web_md"
+    model: "en_core_web_sm"
   - name: SpacyTokenizer
   - name: SpacyFeaturizer
   - name: RegexFeaturizer
