@@ -20,7 +20,7 @@ COPY . .
 
 USER root
 RUN chown -R 1001 /app
-RUN ["pip", "install", "-r", "requirements.txt"]
+RUN ["pip", "install", "-r", "req_local.txt"]
 
 RUN ["python3", "-m", "spacy", "download", "en_core_web_md"]
 
