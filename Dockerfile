@@ -25,4 +25,6 @@ RUN ["pip", "install", "-r", "req_local.txt"]
 RUN ["python3", "-m", "spacy", "download", "en_core_web_sm"]
 
 USER 1001
+RUN rm -rf models/*
+RUN rasa train
 CMD ["python", "app.py"]
