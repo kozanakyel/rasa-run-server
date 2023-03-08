@@ -27,4 +27,4 @@ RUN ["python3", "-m", "spacy", "download", "en_core_web_sm"]
 
 USER 1001
 
-CMD ["rasa", "run", "--enable-api", "--cors", "\"*\"", "--port", "$PORT"]
+CMD ["python", "app.py"]
