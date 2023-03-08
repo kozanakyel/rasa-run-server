@@ -49,4 +49,5 @@ class ValidateSimpleTshirtForm(FormValidationAction):
             dispatcher.utter_message(text=f"I don't recognize that tshirt. We serve {'/'.join(ALLOWED_TSHIRT_COLOR)}.")
             return {"tshirt_color": None}
         dispatcher.utter_message(text=f"OK! You want to have a {slot_value} tshirt.")
+        
         return {"tshirt_color": slot_value}
