@@ -1,0 +1,51 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"gpt_info\"}}]": "utter_gpt",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"gpt_info\"}}, {\"prev_action\": {\"action_name\": \"utter_gpt\"}, \"user\": {\"intent\": \"gpt_info\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"buy_tshirt\"}}]": "simple_tshirt_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"buy_tshirt\"}}, {\"active_loop\": {\"name\": \"simple_tshirt_form\"}, \"prev_action\": {\"action_name\": \"simple_tshirt_form\"}, \"user\": {\"intent\": \"buy_tshirt\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"simple_tshirt_form\"}}]": "utter_submit",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"simple_tshirt_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_submit\"}}]": "utter_tshirt_slots",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"simple_tshirt_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_submit\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_tshirt_slots\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"simple_tshirt_form\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"active_loop\": {\"name\": \"simple_tshirt_form\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"active_loop\": {\"name\": \"simple_tshirt_form\"}, \"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "simple_tshirt_form",
+      "[{\"active_loop\": {\"name\": \"simple_tshirt_form\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"active_loop\": {\"name\": \"simple_tshirt_form\"}, \"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"active_loop\": {\"name\": \"simple_tshirt_form\"}, \"prev_action\": {\"action_name\": \"simple_tshirt_form\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"info_shopyverse\"}}]": "utter_info_shopyverse",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"info_shopyverse\"}}, {\"prev_action\": {\"action_name\": \"utter_info_shopyverse\"}, \"user\": {\"intent\": \"info_shopyverse\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"address_search\"}}]": "choose_address",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"address_search\"}}, {\"prev_action\": {\"action_name\": \"choose_address\"}, \"user\": {\"intent\": \"address_search\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"simple_tshirt_form\"}, \"prev_action\": {\"action_name\": \"simple_tshirt_form\"}, \"user\": {\"intent\": \"buy_tshirt\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"utter_iamabot\"}}, {\"active_loop\": {\"name\": \"simple_tshirt_form\"}, \"prev_action\": {\"action_name\": \"simple_tshirt_form\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"simple_tshirt_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_continue\"}, \"user\": {\"intent\": \"stop\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"simple_tshirt_form\"}, \"prev_action\": {\"action_name\": \"simple_tshirt_form\"}, \"slots\": {\"tshirt_size\": [1.0]}, \"user\": {\"intent\": \"buy_tshirt\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"simple_tshirt_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_continue\"}, \"slots\": {\"tshirt_size\": [1.0]}, \"user\": {\"intent\": \"stop\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "predicting default action with intent restart",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"gpt_info\"}}, {\"prev_action\": {\"action_name\": \"utter_gpt\"}, \"user\": {\"intent\": \"gpt_info\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"address_search\"}}, {\"prev_action\": {\"action_name\": \"choose_address\"}, \"user\": {\"intent\": \"address_search\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"gpt_info\"}}]",
+      "[{\"active_loop\": {\"name\": \"simple_tshirt_form\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"active_loop\": {\"name\": \"simple_tshirt_form\"}, \"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"info_shopyverse\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"address_search\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"info_shopyverse\"}}, {\"prev_action\": {\"action_name\": \"utter_info_shopyverse\"}, \"user\": {\"intent\": \"info_shopyverse\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"active_loop\": {\"name\": \"simple_tshirt_form\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "predicting default action with intent back",
+      "handling active loops and forms - simple_tshirt_form"
+    ]
+  }
+}

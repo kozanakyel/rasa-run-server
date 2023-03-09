@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-address_loc",
+      "2": "I-address_loc",
+      "3": "L-address_loc",
+      "4": "U-address_loc",
+      "5": "B-tshirt_color",
+      "6": "I-tshirt_color",
+      "7": "L-tshirt_color",
+      "8": "U-tshirt_color",
+      "9": "B-tshirt_size",
+      "10": "I-tshirt_size",
+      "11": "L-tshirt_size",
+      "12": "U-tshirt_size",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-address_loc": 1,
+      "I-address_loc": 2,
+      "L-address_loc": 3,
+      "U-address_loc": 4,
+      "B-tshirt_color": 5,
+      "I-tshirt_color": 6,
+      "L-tshirt_color": 7,
+      "U-tshirt_color": 8,
+      "B-tshirt_size": 9,
+      "I-tshirt_size": 10,
+      "L-tshirt_size": 11,
+      "U-tshirt_size": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]
